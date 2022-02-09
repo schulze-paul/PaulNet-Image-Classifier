@@ -40,8 +40,8 @@ Adding the maxpool layer after the second convolutional layer reduces the size o
 - image of layers
 
 
->validation loss: 1.39  
-validation accuracy: 54.1%
+> validation loss: 1.39  
+> validation accuracy: 54.1%
 
 The validation loss did not improve much, although accuracy did improve by 3% on the validation data set.
 
@@ -49,8 +49,8 @@ The validation loss did not improve much, although accuracy did improve by 3% on
 
 Adding a ReLu activation function sets all negative output values of the previous layer to zero, but avoids the vanishing gradient problem that occurs with convolutional layers and sigmoid and tanh activation functions.  
 
->validation loss: 1.31  
-validation accuracy: 53.3%
+> validation accuracy: 53.3%
+> validation loss: 1.31  
 
 The improvement in performance is offset somewhat by a longer training that resulted in a slight overfit.
 
@@ -58,32 +58,87 @@ The improvement in performance is offset somewhat by a longer training that resu
 
 Increasing the complexity of the model lead to a faster convergence and higher accuracy compared to the previous iteration of the model. 
 
->validation loss: 1.09  
-validation accuracy: 62.0%
+> validation accuracy: 62.0%  
+> validation loss: 1.09  
 
 ### Introducing BatchNorm
 
 A BatchNorm layer as part of a composite convolutional layer normalizes the output batchwise. 
 
->validation loss: 0.996  
-validation accuracy: 65.4%
+> validation accuracy: 65.4%  
+> validation loss: 0.996  
 
-### Adding a third composite layer
+### Introducing a third composite layer
 
 Further increasing the number of parameters and the complexity of the model, the third composite layer consists has the same composition as the other two composite layers. A convolutional layer, followed by a MaxPool, a ReLU activation function and a BatchNorm. Although the number of training steps needed for convergence has very consistent from the virst version to the last version, the computational compexity per training step has increased greatly because of the much higher number of trainable parameters.
 
->validation loss: 0.897  
->validation accuracy: 69.9%
+> validation accuracy: 69.9%  
+> validation loss: 0.897  
 
 
 ### ReLU activation functions after the linear layers
 
 Adding a ReLU activation function after the linear layers resulted in slight improvements in accuracy.
 
->validation loss: 0.880  
-validation accuracy: 70.7%
+> validation accuracy: 70.7%  
+> validation loss: 0.880  
 
-### Adding a forth composite layer and increasing the amount of channels
+### Increasing the amount of channels further 
+
+This resulted in even higher accuracy. The risk with adding complexity to the model is that it can start overfitting on the train/val dataset, which can lower performance on the test set.
+
+> validation accuracy: 72.4%  
+> validation loss: 0.868  
+
+### Introducing crop and flip transformations
+
+I introduced random crop and horizontal flip transformations on the train/val dataset in order to increase the sample size. This lead to a higher accuracy on the validation dataset and a dramatically lower validation loss. It also helped reduce overfitting which meant more training steps were possible before the validation loss went up again.
+
+> validation accuracy: 76.6%  
+> validation loss: 0.672  
+
+### Introducing a forth composite layer and increasing the number of channels
+
+I also had to lower the kernel size for the convolutional layers to 2x2.
+This increase in complexity came with another slight boost in performance.
+
+> validation accuracy: 77.6%  
+> validation loss: 0.645
+
+### Introducing patience to the early stopping mechanism
+
+I had a suspicion that the training was stopping _too_ early, so I added a patience term of 3. This brought the accuracy over the 80% mark.
+
+> validation accuracy: 80.6%  
+> validation loss: 0.483
+
+---
+
+## Performance on test set
+
+In the end I tested the performance of the neural network on the test dataset. This was the first and only time I used the test set for this model. It represents the performance of the model on data that it did not come in contact with and also shows that the models ability to generalize is excellent.
+
+> test accuracy: 80.6%  
+> test loss: 0.574
+
+The model generalizes well and did not overfit on the train/val dataset. Performance as measured by the accuracy is almost identical to the performance on the validation set.  
+The model has 215,710 parameters.
+
+---
+
+## Comparison with Resnet18 
+
+Resnet is a convolutional neural network with 18 layers. It has about 11 Million parameters, so about 50x as many as I have trained. I modified it slightly to make it work with the 32x32 image dimensions of CIFAR10.
+
+> validation accuracy: 83.6%  
+> validation loss: 0.377
+
+> test accuracy: 81%  
+> test loss: 0.627
+
+As expected, the accuracy of Resnet is higher. However I was able to reach to a comparable accuracy with a much simpler architecture. 
+The validation loss is much lower than what I archieved in my model though.
+
 
 ---
 
