@@ -20,3 +20,8 @@ attempting to get a high test accuracy on the cifar10 dataset with a convolution
 1. using relu after convolutions
 1. using batchnorm after convolution relus
 1. using relus also after convolutions
+
+## improving the training
+
+- exploring the learing rate
+- use adam instead of pure sgd
