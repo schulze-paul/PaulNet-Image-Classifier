@@ -8,20 +8,19 @@
 💾 Dataset: CIFAR10   
 🎯 Test accuracy: 80.6%  
 
-
+![nn architecture](https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/nn_architecture.png?raw=true)
+**Figure 2: Neural Network Architecture.** The network has four composite layers and three linear layers. 
 
 
 ## 📰 Dataset Description
 
 CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the training / validation split. 
 
-<p align='center'>Table 1: Dataset stats.</p>
-<table align='center'>
- 
+<table align='center'> 
   <tr>
-    <td><b>Split</b></td>
-    <td><b># Images</b></td>
-    <td><b># Images per class</b></td>
+    <td align='center'><b>Split</b></td>
+    <td align='center'><b># Images</b></td>
+    <td align='center'><b># Images per class</b></td>
   </tr>
   <tr>
     <td align='center'>Train / Val</td>
@@ -34,8 +33,9 @@ CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the trai
     <td align='center'>1,000</td>
   </tr>
 </table>
+<p align='center'>Table 1: Dataset stats.</p>
 
-</br>
+
 
 
 ## 🔥 Performance on the Test Set
@@ -49,26 +49,83 @@ The model has 215,710 parameters.
 
 ## ⚙️ Network Architecture
 
-The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer.  
+The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer. 
+
+
+<table align='center'> 
+  <tr>
+    <td><b>Layer</b></td>
+    <td><b>Size</b></td>
+    <td><b>Channels</b></td>
+    <td><b>Kernel</b></td>
+    <td><b>Stride</b></td>
+  </tr>
+  <tr>
+    <td align=>Input</td>
+    <td align='right'>32x32</td>
+    <td align='right'>3</td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+  </tr>
+  <tr>
+    <td align=>Convolutional</td>
+    <td align='right'>31x31</td>
+    <td align='right'>32</td>
+    <td align='right'>2x2</td>
+    <td align='right'>1x1</td>
+  </tr>
+ 
+  <tr>
+    <td align=>MaxPool</td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+    <td align='right'>2x2</td>
+    <td align='right'>1x1</td>
+  </tr>
+ 
+  <tr>
+    <td align=>ReLU</td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+  </tr>
+ 
+  <tr>
+    <td align=>BatchNorm</td>
+    <td align='right'> </td>
+    <td align='right'>64</td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+  </tr>
+ 
+  <tr>
+    <td align=>Output</td>
+    <td align='right'>15x15</td>
+    <td align='right'>32</td>
+    <td align='right'> </td>
+    <td align='right'> </td>
+  </tr>
+ 
+</table>
+<p align='center'>Table 2: First Composite Layer.</p
 
 ## 📈 Network Evolution
 
 I started with a very simple network and optimization algorithm and gradually increased the complexity of both, which resulted in gradual increases in performance.
 
 ![validation accuracy](https://github.com/schulze-paul/ML-image-classification/blob/main/images/val_acc_grey.png?raw=true)
-**Figure 1: Validation Accuracy.** As I improved the network architecture and the training algorithm, the network reached higher and higher accuracy. For comparison the performance of my modified version of  Resnet18 is also shown. Data imported from tensorboard.
+**Figure 2: Validation Accuracy.** As I improved the network architecture and the training algorithm, the network reached higher and higher accuracy. For comparison the performance of my modified version of  Resnet18 is also shown. Data imported from tensorboard.
 
 
 ![validation loss](https://github.com/schulze-paul/ML-image-classification/blob/main/images/val_loss_grey.png?raw=true)
-**Figure 2: Validation Loss.** As I improved the network architecture and the training algorithm, The validation loss decreased further and further. For comparison the performance of my modified version of Resnet18 is also shown. Data imported from tensorboard.
+**Figure 3: Validation Loss.** As I improved the network architecture and the training algorithm, The validation loss decreased further and further. For comparison the performance of my modified version of Resnet18 is also shown. Data imported from tensorboard.
 
 #### Initial network architecture 
 > validation accuracy: 51.6%  
 > validation loss: 1.41  
 
-Two convolutional layers with a MaxPool layer in between and then three linear layers. I am using a learning rate scheduler with an initial learning rate of 0.05.  
-
-
+Two convolutional layers with a MaxPool layer in between and then three linear layers. I am using a learning rate scheduler with an initial learning rate of 0.05. 
 This accuracy is already very high for such a simple network and shows that even simple solutions can be effective if the training is done correcty. The network clearly learned some of the features of the dataset. A classification by chance would be a 10% accuracy.
 
 #### Adding a second maxpool layer
