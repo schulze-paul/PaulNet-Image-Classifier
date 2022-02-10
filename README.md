@@ -1,6 +1,6 @@
 # PaulNet-Image-Classifier
 
-[Dataset Description](#dataset-description) | [How it works](#how-it-works) | [Initialization](#initialization) | [Filter](#filter) | [Search](#search) | [Sort](#sort) | [Print](#print) | [Activity Plot](#activity-plot)
+[Dataset Description](#-dataset-description) | [Performance on the Test Set](#-performance-on-the-test-set) | [Network Architecture](#-network-architecture) | [Network Evolution](#-network-evolution) | [Comparison with Resnet18](#-comparison-with-resnet18)
 
 ---
 
@@ -47,8 +47,9 @@ The performance on the test dataset shows that the model is able to generalize f
 The model generalizes well and did not overfit on the train/val dataset. Performance as measured by the accuracy is almost identical to the performance on the validation set.  
 The model has 215,710 parameters.
 
-## 📈 Network Evolution
+## ⚙️ Network Architecture
 
+## 📈 Network Evolution
 
 ![validation accuracy](https://github.com/schulze-paul/ML-image-classification/blob/main/images/val_acc_grey.png?raw=true)
 **Figure 1: Validation Accuracy.** As I improved the network architecture and the training algorithm, the network reached higher and higher accuracy. For comparison the performance of my modified version of  Resnet18 is also shown. Data imported from tensorboard.
@@ -129,7 +130,7 @@ This increase in complexity came with another slight boost in performance.
 
 I had a suspicion that the training was stopping _too_ early, so I added a patience term of 3. This brought the accuracy over the 80% mark.
 
-## Comparison with Resnet18 
+## 🔬 Comparison with Resnet18 
 > validation accuracy: 83.6%  
 > validation loss: 0.377
 
