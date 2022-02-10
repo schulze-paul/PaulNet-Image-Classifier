@@ -1,5 +1,4 @@
 # PaulNet-Image-Classifier
-
 [Dataset Description](#-dataset-description) | [Performance on the Test Set](#-performance-on-the-test-set) | [Network Architecture](#%EF%B8%8F-network-architecture) | [Network Evolution](#-network-evolution) | [Comparison with Resnet18](#-comparison-with-resnet18)
 
 ---
@@ -8,8 +7,11 @@
 💾 Dataset: CIFAR10   
 🎯 Test accuracy: 80.6%  
 
-![nn architecture](https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/nn_architecture.png?raw=true)
-**Figure 2: Neural Network Architecture.** The network has four composite layers and three linear layers. 
+
+Bird             | Car             | Cat             | Deer             | Dog             | Frog             | Horse             | Plane             | Ship             | Truck
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/bird.png?raw=true" width=100>  |  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/car.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/cat.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/deer.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/dog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/frog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/horse.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/plane.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/ship.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/truck.png?raw=true" width=100>
+<p align='center'>Table 1: Example images for each class.</p>
 
 
 ## 📰 Dataset Description
@@ -33,7 +35,7 @@ CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the trai
     <td align='center'>1,000</td>
   </tr>
 </table>
-<p align='center'>Table 1: Dataset stats.</p>
+<p align='center'>Table 2: Dataset stats.</p>
 
 
 
@@ -48,6 +50,10 @@ The model generalizes well and did not overfit on the train/val dataset. Perform
 The model has 215,710 parameters.
 
 ## ⚙️ Network Architecture
+
+![nn architecture](https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/nn_architecture.png?raw=true)
+**Figure 1: Neural Network Architecture.** The network has four composite layers and three linear layers. 
+
 
 The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer. 
 
@@ -108,7 +114,7 @@ The network has four composite convolutional layers. Each of these layers is a c
   </tr>
  
 </table>
-<p align='center'>Table 2: First Composite Layer.</p>
+<p align='center'>Table 3: First Composite Layer.</p>
 
 ## 📈 Network Evolution
 
