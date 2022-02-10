@@ -1,6 +1,6 @@
 # PaulNet-Image-Classifier
 
-[Installation](#📰-dataset-description) | [How it works](#how-it-works) | [Initialization](#initialization) | [Filter](#filter) | [Search](#search) | [Sort](#sort) | [Print](#print) | [Activity Plot](#activity-plot)
+[Dataset Description](#dataset-description) | [How it works](#how-it-works) | [Initialization](#initialization) | [Filter](#filter) | [Search](#search) | [Sort](#sort) | [Print](#print) | [Activity Plot](#activity-plot)
 
 ---
 
