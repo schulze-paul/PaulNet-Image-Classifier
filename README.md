@@ -53,6 +53,8 @@ The network has four composite convolutional layers. Each of these layers is a c
 
 ## 📈 Network Evolution
 
+I started with a very simple network and optimization algorithm and gradually increased the complexity of both, which resulted in gradual increases in performance.
+
 ![validation accuracy](https://github.com/schulze-paul/ML-image-classification/blob/main/images/val_acc_grey.png?raw=true)
 **Figure 1: Validation Accuracy.** As I improved the network architecture and the training algorithm, the network reached higher and higher accuracy. For comparison the performance of my modified version of  Resnet18 is also shown. Data imported from tensorboard.
 
