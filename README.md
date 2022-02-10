@@ -108,7 +108,7 @@ The network has four composite convolutional layers. Each of these layers is a c
   </tr>
  
 </table>
-<p align='center'>Table 2: First Composite Layer.</p
+<p align='center'>Table 2: First Composite Layer.</p>
 
 ## 📈 Network Evolution
 
