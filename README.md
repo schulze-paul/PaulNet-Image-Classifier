@@ -49,6 +49,8 @@ The model has 215,710 parameters.
 
 ## ⚙️ Network Architecture
 
+The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer.  
+
 ## 📈 Network Evolution
 
 ![validation accuracy](https://github.com/schulze-paul/ML-image-classification/blob/main/images/val_acc_grey.png?raw=true)
