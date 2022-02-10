@@ -1,6 +1,6 @@
 # PaulNet-Image-Classifier
 
-[Dataset Description](#-dataset-description) | [Performance on the Test Set](#-performance-on-the-test-set) | [Network Architecture](#-network-architecture) | [Network Evolution](#-network-evolution) | [Comparison with Resnet18](#-comparison-with-resnet18)
+[Dataset Description](#-dataset-description) | [Performance on the Test Set](#-performance-on-the-test-set) | [Network Architecture](#%EF%B8%8F-network-architecture) | [Network Evolution](#-network-evolution) | [Comparison with Resnet18](#-comparison-with-resnet18)
 
 ---
 
