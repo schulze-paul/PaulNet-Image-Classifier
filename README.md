@@ -114,7 +114,7 @@ This resulted in even higher accuracy. The risk with adding complexity to the mo
 > validation accuracy: 76.6%  
 > validation loss: 0.672  
 
-I introduced random crop and horizontal flip transformations on the train/val dataset in order to increase the sample size. This lead to a higher accuracy on the validation dataset and a dramatically lower validation loss. It also helped reduce overfitting which meant more training steps were possible before the validation loss went up again.
+I introduced random crop and horizontal flip transformations on the train/val dataset in order to increase the variance in the train/validation set. This lead to a higher accuracy on the validation dataset and a dramatically lower validation loss. It also helped reduce overfitting which meant more training steps were possible before the validation loss went up again.
 
 #### Introducing a forth composite layer and increasing the number of channels
 > validation accuracy: 77.6%  
