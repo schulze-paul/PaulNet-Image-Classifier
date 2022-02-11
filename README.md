@@ -1,5 +1,11 @@
 # PaulNet-Image-Classifier
-[Dataset Description](#-dataset-description) | [Performance on the Test Set](#-performance-on-the-test-set) | [Network Architecture](#%EF%B8%8F-network-architecture) | [Network Evolution](#-network-evolution) | [Comparison with Resnet18](#-comparison-with-resnet18)
+
+Author: [Paul Schulze]("schulze-paul.github.io")
+
+
+
+
+[Dataset](#-dataset-description) | [Performance](#-performance-on-the-test-set) | [Architecture](#%EF%B8%8F-network-architecture) | [Improvements](#-network-improvements) | [Comparison with Resnet18](#-comparison-with-resnet18)
 
 ---
 
@@ -116,7 +122,7 @@ The network has four composite convolutional layers. Each of these layers is a c
 </table>
 <p align='center'>Table 3: First Composite Layer.</p>
 
-## 📈 Network Evolution
+## 📈 Network Improvements
 
 I started with a very simple network and optimization algorithm and gradually increased the complexity of both, which resulted in gradual increases in performance.
 
