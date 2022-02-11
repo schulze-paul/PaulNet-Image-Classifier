@@ -1,6 +1,6 @@
 # PaulNet-Image-Classifier
 
-Author: [Paul Schulze]("schulze-paul.github.io")
+Author: [Paul Schulze](https://schulze-paul.github.io)
 
 
 
