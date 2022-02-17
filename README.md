@@ -23,7 +23,7 @@ Bird             | Car             | Cat             | Deer             | Dog   
 <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/bird.png?raw=true" width=100>  |  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/car.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/cat.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/deer.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/dog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/frog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/horse.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/plane.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/ship.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/truck.png?raw=true" width=100>
 <p align='center'>Table 1: Example images for each class.</p>
 
-CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the training / validation split. 
+CIFAR-10 Consists of 60 K annotated images. Each class has 5 K images in the training / validation split. 
 
 <table align='center'> 
   <tr>
