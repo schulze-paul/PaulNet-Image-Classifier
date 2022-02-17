@@ -1,26 +1,27 @@
 # PaulNet-Image-Classifier
 
-Author: [Paul Schulze](https://schulze-paul.github.io)
-
-
-
-
-[Dataset](#-dataset-description) | [Performance](#-performance-on-the-test-set) | [Architecture](#%EF%B8%8F-network-architecture) | [Improvements](#-network-improvements) | [Comparison with Resnet18](#-comparison-with-resnet18)
+Author: [Paul Schulze](https://schulze-paul.github.io)  
+Task: 🖼️ Image classification    
+Dataset: 💾 [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)  
+Test accuracy: 🎯 [80.6%](#-performance-on-the-test-set)
 
 ---
 
-🖼️ Task: Image classification  
-💾 Dataset: CIFAR10   
-🎯 Test accuracy: 80.6%  
 
+In this project, I use my experiences from [Prof. Niessner](https://www.niessnerlab.org/members/matthias_niessner/profile.html)s course [I2DL](https://niessner.github.io/I2DL/) at [TUM](https://www.tum.de/) to improve a very simple convolutional neutral network (CNN) and bring the validation accuracy from ~50% to ~80%. The CNN is trained on an image classification task on the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset and reaches a test accuracy of 80.6%.
+
+- [Dataset](#-dataset-description) 
+- [Performance](#-performance-on-the-test-set) 
+- [Architecture](#%EF%B8%8F-network-architecture) 
+- [Improvements](#-network-improvements) 
+- [Comparison with Resnet18](#-comparison-with-resnet18)
+
+## 📰 Dataset Description
 
 Bird             | Car             | Cat             | Deer             | Dog             | Frog             | Horse             | Plane             | Ship             | Truck
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/bird.png?raw=true" width=100>  |  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/car.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/cat.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/deer.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/dog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/frog.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/horse.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/plane.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/ship.png?raw=true" width=100>|  <img src="https://github.com/schulze-paul/PaulNet-Image-Classifier/blob/main/images/Examples/truck.png?raw=true" width=100>
 <p align='center'>Table 1: Example images for each class.</p>
-
-
-## 📰 Dataset Description
 
 CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the training / validation split. 
 
@@ -53,7 +54,7 @@ CIFAR10 Consists of 60 K annotated images. Each class has 5 K images in the trai
 
 The performance on the test dataset shows that the model is able to generalize from the training and validation dataset to unseen data. The accuracy is close to the performance of the Resnet18 network, which has much higher complexity.
 The model generalizes well and did not overfit on the train/val dataset. Performance as measured by the accuracy is almost identical to the performance on the validation set.  
-The model has 215,710 parameters.
+
 
 ## ⚙️ Network Architecture
 
@@ -61,7 +62,7 @@ The model has 215,710 parameters.
 **Figure 1: Neural Network Architecture.** The network has four composite layers and three linear layers. 
 
 
-The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer. 
+The network has four composite convolutional layers. Each of these layers is a combination of a convolutional layer with a max pool layer, a ReLU activation function, and a batch norm layer. It has a total of 215,710 parameters.
 
 
 <table align='center'> 
